@@ -8,17 +8,17 @@ class Reader extends Component {
       // {name: "maximillain", fruits:["pumpkin", "kiwi", "pineapple"], colors: ["pink","cyan","magenta"], car: ["mustang"], image: "2.png"},
       // {name: "daniel", fruits:["custard", "peanuts", "avacado"], colors: ["blue","black","grape vine"], car: ["camaro"], image: "3.png"}
     ],
-    content: null
+    content: null //object initially null
   };
 
   contentLoad=()=> {
     let obj;
     this.state.people.forEach(function(value) {
-      obj={name: value.name, fruits: value.fruits, car: value.car}
+      obj={name: value.name, fruits: value.fruits, car: value.car} //object with value
     });
-    console.log(obj);
-    this.setState({content: obj})
-    console.log(this.state.content);
+    console.log(obj); //this is good
+    this.setState({content: obj}) //being copied here
+    console.log(this.state.content); //this is printing null for the first click only
   }
 
   render() {
