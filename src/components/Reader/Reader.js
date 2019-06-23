@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Person from '../person/Person';
 
 class Reader extends Component {
   state={
